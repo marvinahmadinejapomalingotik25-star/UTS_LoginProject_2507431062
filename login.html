@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibble</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Isometra">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <section class="login">
+        <div class="logo">
+            <a href="login.html">Uplands</a>
+        </div>
+        <div class="login-container">
+            <h1>Welcome to <span>Uplands</span></h1>
+            <form action="login.php" method="post">
+                <button type="button" class="google-login">Login with Google</button>
+                <p>or</p>
+                <label for="username">Username<span> *</span></label>
+                <input type="text" id="username" name="username" required placeholder="Enter Email or Username">
+                <div class="form-group">
+                        <div class="password-label">
+                            <label for="password">Password</label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" autocomplete="current-password" required>
+                    </div>
+                <div class="remember">
+                        <label class="remember-label">
+                            <input type="checkbox" id="remember" name="remember"><span>  Remember Me</span>
+                        </label>
+                </div>
+                <button type="submit">Login</button>
+                <p class="terms">
+                    By continuing, you agree to our
+                    <a href="#">Terms</a> and
+                    <a href="#">Privacy Policy</a>.
+                </p>
+                <p class="signup">
+                    Don't have an account?
+                    <a href="#">Sign up</a>
+                </p>
+            </form>
+        </div>
+    </section>
+    <section class="art">
+        <div class="art-container">
+            <img src="./images/Glinda Uplands_20240930141105.png" alt="Glinda">
+        </div>
+    </section>
+</body>
+</html>

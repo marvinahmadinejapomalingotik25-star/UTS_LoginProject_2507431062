@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(21, 21, 43);
+    background-color: rgb(255, 255, 255);
+}
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 74fr) minmax(0, 26fr);
+    min-height: 100vh;
+}
+.login {
+    min-width: 0;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.logo {
+    position: absolute;
+    top: 48px;
+    left: 58px;
+}
+.logo a {
+    text-decoration: none;
+    color: rgb(45, 30, 82);
+    font-family: "Isometra", serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.login-container {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.login-container h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: rgb(17, 17, 36);
+}
+.login-container h1 span {
+    font-family: "Isometra", serif;
+    color:rgb(255, 147, 207);
+}
+.google-login {
+    width: 100%;
+    height: 48px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 229);
+    border-radius: 24px;
+    font-size: 16px;
+    color: rgb(37, 37, 54);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.google-login:hover {
+    background-color: rgb(247, 247, 250);
+}
+.login-container form > p {
+    margin: 24px 0;
+    color: rgb(139, 139, 160);
+    font-size: 15px;
+}
+.login-container label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: rgb(85, 85, 104);
+    margin-bottom: 8px;
+}
+.password-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.password-label label {
+    margin-bottom: 8px;
+}
+.forgot-password {
+    margin-bottom: 8px;
+    color: #666680;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.forgot-password:hover {
+    color: #111124;
+}
+.remember {
+    margin-bottom: 22px;
+}
+.remember-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #555568;
+    font-size: 14px;
+    cursor: pointer;
+}
+.remember-label input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.login-container label span {
+    color: rgb(200, 75, 97);
+}
+.login-container input {
+    width: 100%;
+    height: 52px;
+    padding: 0 18px;
+    margin-bottom: 18px;
+    border: 1px solid rgb(221, 221, 229);
+    border-radius: 8px;
+    font-size: 15px;
+    color: rgb(34, 34, 53);
+    outline: none;
+}
+.login-container .remember-label input {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    accent-color: rgb(45, 30, 82);
+}
+.remember-label span {
+    color: inherit;
+}
+.login-container input::placeholder {
+    color: rgb(170, 170, 188);
+}
+.login-container input:focus {
+    border-color: rgb(153, 153, 170);
+}
+.login-container form > button[type="submit"] {
+    width: 100%;
+    height: 52px;
+    margin-top: 2px;
+    border: none;
+    border-radius: 26px;
+    background-color: rgb(13, 13, 36);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.login-container form > button[type="submit"]:hover {
+    background-color: rgb(28, 28, 56);
+}
+.terms {
+    margin-top: 26px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgb(133, 133, 154);
+}
+.terms a {
+    color: rgb(119, 119, 143);
+    text-decoration: underline;
+}
+.terms a:hover {
+    color: rgb(51, 51, 72);
+}
+.signup {
+    margin-top: 26px;
+    font-size: 13px;
+    color: rgb(133, 133, 154);
+}
+.signup a {
+    color: rgb(119, 119, 143);
+    text-decoration: underline;
+}
+.signup a:hover {
+    color: rgb(51, 51, 72);
+}
+.art {
+    min-width: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.art-container {
+    width: 100%;
+    height: 100%;
+}
+.art-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .login {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 110px 20px 40px;
+    }
+    .login-container {
+        position: static;
+        width: min(400px, 100%);
+        transform: none;
+    }
+    .logo a {
+        font-size: 24px;
+    }
+    .art {
+        display: none;
+    }
+}
